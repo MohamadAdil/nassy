@@ -80,3 +80,215 @@ figure {
 }
 
 /*  */
+.container-fluid {
+  padding: 0 80px !important;
+}
+
+.btn-link {
+  font: 600 16px/1.2 var(--font-family-f1);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+  display: inline-block;
+  color: var(--white);
+}
+
+/* hero-section  */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 80dvh;
+  display: flex;
+  align-items: end;
+  padding: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000002e;
+    z-index: 2;
+  }
+}
+
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  .swiper-slide {
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.hero-content-wrapper {
+  position: relative;
+  z-index: 9;
+  width: 100%;
+
+
+  .hero-content {
+    max-width: 767px;
+
+    h1 {
+      font: 700 46px/1.2 var(--font-family-f1);
+      color: var(--white);
+      margin: 0;
+    }
+
+    a {
+      margin: 10px 0 0;
+    }
+  }
+}
+
+/* category-section */
+.category-section {
+  padding: 20px 0;
+}
+
+.category-item-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+
+  .category-item {
+    min-width: 0;
+    position: relative;
+    min-height: 442px;
+    display: flex;
+    align-items: end;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: #0000002e;
+      z-index: 2;
+    }
+  }
+
+  .category-item-img {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .category-item-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    width: 100%;
+
+    h3 {
+      font: 700 46px/1.2 var(--font-family-f1);
+      color: var(--white);
+      margin: 0;
+    }
+
+    a {
+      margin: 10px 0 0;
+    }
+  }
+}
+
+/* quote-section */
+.quote-section {
+  padding: 80px 0;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+
+  .quote-content {
+    max-width: 767px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      font: 700 46px/1.2 var(--font-family-f1);
+      margin: 0;
+    }
+
+    p {
+      font: 400 20px/1.6 var(--font-family-f1);
+      margin: 10px 0 0;
+    }
+  }
+
+}
+
+.with-teddy {
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &::before {
+    background-image: url("https://nassy.com.au/wp-content/uploads/2026/07/about-teddy-left-updated.png");
+    width: 280px;
+    height: 280px;
+    bottom: 0;
+    left: 0;
+    top: auto;
+  }
+
+  &::after {
+    background-image: url("https://nassy.com.au/wp-content/uploads/2026/07/about-teddy-right-updated.png");
+    width: 280px;
+    height: 280px;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+/* about-cnt-section */
+.about-cnt-section {
+  padding: 80px 0;
+
+  .about-cnt {
+    h2 {
+      font: 700 46px/1.2 var(--font-family-f1);
+      margin: 0;
+    }
+
+    p {
+      font: 400 16px/1.6 var(--font-family-f1);
+      margin: 10px 0 0;
+    }
+  }
+}

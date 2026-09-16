@@ -1,0 +1,6 @@
+/* Tablet + Mobile */
+@media (max-width: 991.98px) {
+  .category-item-wrap {
+    grid-template-columns: 1fr;
+  }
+}
