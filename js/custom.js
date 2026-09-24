@@ -14,3 +14,34 @@ const heroSlider = new Swiper(".hero-slider", {
     disableOnInteraction: false,
   },
 });
+
+new Swiper('.product-carousel', {
+  slidesPerView: 4,
+  slidesPerGroup: 1,
+  spaceBetween: 20,
+  speed: 500,
+  loop: false,
+  freeMode: false,
+
+  navigation: {
+    nextEl: '.product-carousel .swiper-button-next',
+    prevEl: '.product-carousel .swiper-button-prev'
+  },
+
+  pagination: {
+    el: '.product-carousel .swiper-pagination',
+    clickable: true
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    }
+  }
+});
